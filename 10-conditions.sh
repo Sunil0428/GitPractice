@@ -3,7 +3,7 @@
 echo "please enter a number"
 read x
 
-if [$x -gt 20]
+if [ $x -gt 20 ]
 then
    echo "the entered number is greater than 20"
 else
