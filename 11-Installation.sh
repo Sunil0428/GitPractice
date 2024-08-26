@@ -14,6 +14,10 @@ if [ $? -eq 0 ]
 then 
      echo "Git is already installed"
 else
+     
       echo "Git is not yet installed"
-      
+      echo "So we are installing , provide the command"
+      read Command
+      ($Command)
+      echo "Given command is $Command"
 fi
