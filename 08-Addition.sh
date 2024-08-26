@@ -5,4 +5,4 @@ y=$2
 
 z=$(($x+$y))
 
-echo "Addition of $x and $y is $z
+echo "Addition of $x and $y is $z"
