@@ -2,9 +2,7 @@
 
 User=$(id -u)
 
-if [ $User -eq 0 ]
+if [ $User -ne 0 ]
 then
-        echo "Both variables are the same"
-else
-        echo "Both variables are different"
+   echo "you cant install as you dnt have req priviliges" 
 fi
