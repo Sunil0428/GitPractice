@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Persons ("Darshana" "Jai" "Sunil" "Bhuvnaa")
+Persons=("Darshana" "Jai" "Sunil" "Bhuvnaa")
 
 echo "$Persons[0]"
 echo "$Persons[1]"
