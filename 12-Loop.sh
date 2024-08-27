@@ -26,7 +26,7 @@ CHECK_ROOT
 
 for PACKAGE in $@ #this referes all te arguments passed to this file at run time
 do 
-     dnf list insatlled $PACKAGE
+     dnf list installed $PACKAGE
      if [ $? -eq 0 ]
      then
      echo -e "$R $PACKAGE is already installed $N"
