@@ -17,14 +17,21 @@ VALIDATE()
 {
     if [ $1 -eq 0 ]
     then 
-        echo -e "$R $2 is SUCCESS $N"
+        echo -e "$R $2 INSATLLATION is SUCCESS $N"
     else 
-        echo -e "$Y $2 is not FAILED $N"
+        echo -e "$Y $2 is INSTALLATION FAILED $N"
     fi
 }
 CHECK_ROOT
 
 for PACKAGE in $@ #this referes all te arguments passed to this file at run time
 do 
-echo $PACKAGE
+     dnf insatlled $PACKAGE
+     if [ $? -eq 0 ]
+     then
+     echo "$PACAKAGE is already installed"
+     else
+     dnf insatll $PACKAGE -y
+     VALIDATE S? $PACKAGE
+     fi
 done
