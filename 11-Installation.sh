@@ -1,15 +1,15 @@
 #!/bin/bash
 
 USER=$(id -u)
-R= -e "\e[32m]"
-Y= -e "\e[33m]"
-N= -e "\e[0m]"
+R= "\e[32m]"
+Y= "\e[33m]"
+N= "\e[0m]"
 
 CHECK_ROOT()
 {
     if [ $USER -ne 0 ]
     then
-     echo "you cant install as $R you dnt have req priviliges $N" 
+     echo "you cant install as -e $R you dnt have req priviliges -e $N" 
      exit 1
      fi
 }
