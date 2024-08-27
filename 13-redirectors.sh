@@ -11,6 +11,8 @@ R="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+mkdir -p $LOGDIRECTORY
+
 CHECK_ROOT()
 {
     if [ $USER -ne 0 ]
@@ -30,7 +32,6 @@ VALIDATE()
 }
 CHECK_ROOT
 
-mkdir -p $LOGDIRECTORY
 
 for PACKAGE in $@ #this referes all te arguments passed to this file at run time
 do 
