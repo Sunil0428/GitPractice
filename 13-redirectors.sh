@@ -5,8 +5,6 @@ FILENAME=$(echo $0|cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d+%H-%M-%S)
 LOGFILE=$LOGDIRECTORY/$FILENAME-$TIMESTAMP.log
 
-mkdir -p $LOGDIRECTORY
-
 USER=$(id -u)
 R="\e[32m"
 Y="\e[33m"
@@ -30,6 +28,7 @@ VALIDATE()
     fi
 }
 CHECK_ROOT
+mkdir -p $LOGDIRECTORY
 
 for PACKAGE in $@ #this referes all te arguments passed to this file at run time
 do 
