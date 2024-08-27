@@ -1,12 +1,15 @@
 #!/bin/bash
 
 USER=$(id -u)
+R= -e "\e[32m]"
+Y= -e "\e[33m]"
+N= -e "\e[0m]"
 
 CHECK_ROOT()
 {
     if [ $USER -ne 0 ]
     then
-     echo "you cant install as you dnt have req priviliges" 
+     echo "you cant install as $R you dnt have req priviliges $N" 
      exit 1
      fi
 }
@@ -16,7 +19,7 @@ VALIDATE()
     then 
         echo "$2 is SUCCESS"
     else 
-        echo "$2 is not SUCCESS"
+        echo "$2 is not FAILED"
     fi
 }
 CHECK_ROOT
