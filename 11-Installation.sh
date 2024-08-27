@@ -17,9 +17,9 @@ VALIDATE()
 {
     if [ $1 -eq 0 ]
     then 
-        echo "$2 is SUCCESS"
+        echo -e "$R $2 is SUCCESS $N"
     else 
-        echo "$2 is not FAILED"
+        echo -e "$Y $2 is not FAILED $N"
     fi
 }
 CHECK_ROOT
