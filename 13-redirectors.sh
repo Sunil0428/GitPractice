@@ -30,8 +30,8 @@ VALIDATE()
         echo -e "$Y $2 is INSTALLATION FAILED $N"&>>$LOGFILE
     fi
 }
-USAGE{
-    echo -e "USAGE $0 package1, package 2..." 
+USAGE(){
+    echo -e "$R USAGE $0 package1, package 2...$N" 
     exit 1
 }
 CHECK_ROOT
