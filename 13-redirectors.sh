@@ -17,7 +17,7 @@ CHECK_ROOT()
 {
     if [ $USER -ne 0 ]
     then
-     echo  -e "you cant install as $R you dnt have req priviliges $N"&>>$LOGFILE
+     echo  -e "you cant install as $R you dnt have req priviliges $N"| tee -a $LOGFILE
      exit 1
      fi
 }
@@ -25,9 +25,9 @@ VALIDATE()
 {
     if [ $1 -eq 0 ]
     then 
-        echo -e "$R $2 INSATLLATION is SUCCESS $N"&>>$LOGFILE
+        echo -e "$R $2 INSATLLATION is SUCCESS $N"| tee -a $LOGFILE
     else 
-        echo -e "$Y $2 is INSTALLATION FAILED $N"&>>$LOGFILE
+        echo -e "$Y $2 is INSTALLATION FAILED $N"| tee -a $LOGFILE
     fi
 }
 USAGE(){
@@ -43,13 +43,13 @@ fi
 
 for PACKAGE in $@ #this referes all te arguments passed to this file at run time
 do 
-     dnf list installed $PACKAGE&>>$LOGFILE
+     dnf list installed $PACKAGE
      if [ $? -eq 0 ]
      then
-     echo -e "$R $PACKAGE is already installed $N"&>>$LOGFILE
+     echo -e "$R $PACKAGE is already installed $N"| tee -a $LOGFILE
      else
-          echo -e "$R $PACKAGE Initaitiong Installation $N"&>>$LOGFILE
-          dnf install $PACKAGE -y&>>$LOGFILE
+          echo -e "$R $PACKAGE Initaitiong Installation $N"| tee -a $LOGFILE
+          dnf install $PACKAGE -y
           VALIDATE $? $PACKAGE
      fi
 done
