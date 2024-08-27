@@ -29,9 +29,10 @@ do
      dnf list insatlled $PACKAGE
      if [ $? -eq 0 ]
      then
-     echo "$PACAKAGE is already installed"
+     echo -e "$R $PACKAGE is already installed $N"
      else
-     dnf insatll $PACKAGE -y
-     VALIDATE S? $PACKAGE
+          echo -e "$R $PACKAGE Initaitiong Installation $N"
+          dnf insatll $PACKAGE -y
+          VALIDATE $? $PACKAGE
      fi
 done
