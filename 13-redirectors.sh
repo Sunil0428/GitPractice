@@ -30,8 +30,16 @@ VALIDATE()
         echo -e "$Y $2 is INSTALLATION FAILED $N"&>>$LOGFILE
     fi
 }
+USAGE{
+    echo -e "USAGE $0 package1, package 2..." 
+    exit 1
+}
 CHECK_ROOT
 
+if [ $# -eq 0 ]
+    then 
+    USAGE
+fi
 
 for PACKAGE in $@ #this referes all te arguments passed to this file at run time
 do 
