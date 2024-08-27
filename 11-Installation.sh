@@ -1,9 +1,9 @@
 #!/bin/bash
 
 USER=$(id -u)
-R= "\e[32m"
-Y= "\e[33m"
-N= "\e[0m"
+R="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 CHECK_ROOT()
 {
