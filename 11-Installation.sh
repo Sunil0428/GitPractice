@@ -1,41 +1,52 @@
 #!/bin/bash
 
-User=$(id -u)
+USER=$(id -u)
+R= "\e[1;31m
+Y= "\e[1;32m
+N= "\e[1;0
 
-if [ $User -ne 0 ]
+VALIDATE()
+{
+  echo "exit status : $1"
+}
+
+if [ $USER -ne 0 ]
 then
    echo "you cant install as you dnt have req priviliges" 
    exit 1
 fi
 
-dnf list installed git 
 
-if [ $? -eq 0 ]
-then 
-     echo "Git is already installed"
-else
-      echo "Git is not yet installed"
-      dnf install git -y
-      if [ $? -ne 0 ]
-      then  
-           echo "Git Insatllation is failed .... please check"
-      else
-           echo "Git Installation is successful"
-      fi        
-fi
+ dnf list installed git 
 
-dnf list installed mysql 
+ VALIDATE $?
 
-if [ $? -eq 0 ]
-then 
-     echo "mysql is already installed"
-else
-      echo "mysql is not yet installed"
-      dnf install mysql -y
-      if [ $? -ne 0 ]
-      then  
-           echo "mysql Insatllation is failed .... please check"
-      else
-           echo "mysql Installation is successful"
-      fi      
-fi
+# if [ $? -eq 0 ]
+# then 
+#      echo "Git is already installed"
+# else
+#       echo "Git is not yet installed"
+#       dnf install git -y
+#       if [ $? -ne 0 ]
+#       then  
+#            echo "Git Insatllation is failed .... please check"
+#       else
+#            echo "Git Installation is successful"
+#       fi        
+# fi
+
+# dnf list installed mysql 
+
+# if [ $? -eq 0 ]
+# then 
+#      echo "mysql is already installed"
+# else
+#       echo "mysql is not yet installed"
+#       dnf install mysql -y
+#       if [ $? -ne 0 ]
+#       then  
+#            echo "mysql Insatllation is failed .... please check"
+#       else
+#            echo "mysql Installation is successful"
+#       fi      
+# fi
