@@ -32,7 +32,7 @@ do
      echo -e "$R $PACKAGE is already installed $N"
      else
           echo -e "$R $PACKAGE Initaitiong Installation $N"
-          dnf insatll $PACKAGE -y
+          dnf install $PACKAGE -y
           VALIDATE $? $PACKAGE
      fi
 done
