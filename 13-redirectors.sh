@@ -3,7 +3,7 @@
 LOGDIRECTORY="/var/log/Shelllogs"
 FILENAME=$(echo $0|cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d+%H-%M-%S)
-LOGFILE=$LOGDIRECTORY/$FILENAME-$TIMESTAMP.log
+LOGFILE="$LOGDIRECTORY/$FILENAME-$TIMESTAMP.log"
 
 USER=$(id -u)
 
