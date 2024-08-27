@@ -5,9 +5,9 @@ VALIDATE()
 {
     if [ $1 -eq 0 ]
     then 
-        echo "Command is SUCCESS"
+        echo "$2 is SUCCESS"
     else 
-        echo "command is not SUCCESS"
+        echo "$2 is not SUCCESS"
     fi
 }
 
@@ -19,32 +19,22 @@ fi
  dnf list installed git 
  VALIDATE $?
 
-# if [ $? -eq 0 ]
-# then 
-#      echo "Git is already installed"
-# else
-#       echo "Git is not yet installed"
-#       dnf install git -y
-#       if [ $? -ne 0 ]
-#       then  
-#            echo "Git Insatllation is failed .... please check"
-#       else
-#            echo "Git Installation is successful"
-#       fi        
-# fi
+if [ $? -eq 0 ]
+then 
+     echo "Git is already installed"
+else
+      echo "Git is not yet installed"
+      dnf install git -y
+      VALIDATE $? "Installed Git"      
+fi
 
-# dnf list installed mysql 
+dnf list installed mysql 
 
-# if [ $? -eq 0 ]
-# then 
-#      echo "mysql is already installed"
-# else
-#       echo "mysql is not yet installed"
-#       dnf install mysql -y
-#       if [ $? -ne 0 ]
-#       then  
-#            echo "mysql Insatllation is failed .... please check"
-#       else
-#            echo "mysql Installation is successful"
-#       fi      
-# fi
+if [ $? -eq 0 ]
+then 
+     echo "mysql is already installed"
+else
+      echo "mysql is not yet installed"
+      dnf install mysql -y
+      VALIDATE $? "Installed mssql"         
+fi
