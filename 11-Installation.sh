@@ -2,12 +2,10 @@
 
 USER=$(id -u)
 R= "\e[1;31m
-Y= "\e[1;32m
-N= "\e[1;0
 
 VALIDATE()
 {
-  echo "exit status : $1"
+  echo "exit status : $R $1"
 }
 
 if [ $USER -ne 0 ]
