@@ -1,6 +1,15 @@
 #!/bin/bash
 
 USER=$(id -u)
+
+CHECK_ROOT()
+{
+    if [ $USER -ne 0 ]
+    then
+     echo "you cant install as you dnt have req priviliges" 
+     exit 1
+     fi
+}
 VALIDATE()
 {
     if [ $1 -eq 0 ]
@@ -10,14 +19,10 @@ VALIDATE()
         echo "$2 is not SUCCESS"
     fi
 }
+CHECK_ROOT
 
-if [ $USER -ne 0 ]
-then
-   echo "you cant install as you dnt have req priviliges" 
-   exit 1
-fi
- dnf list installed git 
- VALIDATE $? "GIT installation"
+dnf list installed git 
+VALIDATE $? "GIT installation"
 
 if [ $? -eq 0 ]
 then 
