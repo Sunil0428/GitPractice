@@ -1,11 +1,9 @@
 #!/bin/bash
 
 USER=$(id -u)
-R= "\e[1;31m
-
 VALIDATE()
 {
-  echo "exit status : $R $1"
+  echo "exit status : $1"
 }
 
 if [ $USER -ne 0 ]
