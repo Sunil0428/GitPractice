@@ -29,7 +29,7 @@ VALIDATE $? "GIT installation"
 
 if [ $? -eq 0 ]
 then 
-     echo "Git is already installed"
+     echo -e " $Y Git is already installed $N"
 else
       echo "Git is not yet installed"
       dnf install git -y
@@ -40,7 +40,7 @@ dnf list installed mysql
 
 if [ $? -eq 0 ]
 then 
-     echo "mysql is already installed"
+     echo -e " $R mysql is already installed"
 else
       echo "mysql is not yet installed"
       dnf install mysql -y
