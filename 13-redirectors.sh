@@ -35,13 +35,13 @@ CHECK_ROOT
 
 for PACKAGE in $@ #this referes all te arguments passed to this file at run time
 do 
-     dnf list installed $PACKAGE
+     dnf list installed $PACKAGE&>>$LOGFILE
      if [ $? -eq 0 ]
      then
      echo -e "$R $PACKAGE is already installed $N"&>>$LOGFILE
      else
           echo -e "$R $PACKAGE Initaitiong Installation $N"&>>$LOGFILE
-          dnf install $PACKAGE -y
+          dnf install $PACKAGE -y&>>$LOGFILE
           VALIDATE $? $PACKAGE
      fi
 done
