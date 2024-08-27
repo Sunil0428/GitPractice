@@ -9,7 +9,7 @@ CHECK_ROOT()
 {
     if [ $USER -ne 0 ]
     then
-     echo "you cant install as -e $R you dnt have req priviliges -e $N" 
+     echo  -e "you cant install as $R you dnt have req priviliges $N" 
      exit 1
      fi
 }
