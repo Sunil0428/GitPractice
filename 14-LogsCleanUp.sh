@@ -22,7 +22,6 @@ echo $Files
 #    echo "Deleting line: $Result"
 
 #done <<<$Files
-for $Files
-do
-    echo "Deleting line: $Result"
-done
+
+echo $Files[0]
+echo $Files[1]
