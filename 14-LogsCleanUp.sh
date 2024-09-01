@@ -12,4 +12,6 @@ if [ -d "$LOGSFOLDER" ]
         echo -e "$Y$LOGSFOLDER exists $N"
     else
         echo -e "$R$LOGSFOLDER is not exists $N"
+
+fi
 }
