@@ -11,6 +11,7 @@ CHECK_ROOT()
     if [ $(id -u) -ne 0 ]
     then
         echo "Logged in user is unauthorized"
+        exit 1
     else
         echo "Logged in user is authorized"
     fi
