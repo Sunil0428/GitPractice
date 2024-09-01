@@ -13,6 +13,12 @@ if [ -d "$LOGSFOLDER" ]
         echo -e "$R $LOGSFOLDER is not exists $N"
 fi
 
-Files=$(find $LOGSFOLDER -name *.log -mtime +60)
+Files=$(find $LOGSFOLDER -name *.log -mtime +30)
 
 echo $Files
+
+while IFS= read -r Result
+do
+    echo "Deleting line: $Result"
+
+done <<<$Files
