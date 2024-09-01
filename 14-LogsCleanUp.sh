@@ -23,5 +23,5 @@ echo $Files
 
 #done <<<$Files
 
-echo $Files[0]
-echo $Files[1]
+echo ${Files[0]}
+echo ${Files[1]}
