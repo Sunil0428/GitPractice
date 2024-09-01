@@ -13,6 +13,7 @@ CHECK_ROOT()
         echo "Logged in user is unauthorized"
     else
         echo "Logged in user is authorized"
+    fi
 }
 
 CHECK_ROOT
