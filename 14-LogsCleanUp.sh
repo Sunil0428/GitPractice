@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOGSFOLDER="/home/ec2-user/logs"
+LOGSFOLDER="/home/ec2-user/logs/"
 
 R="\e[32m"
 Y="\e[33m"
