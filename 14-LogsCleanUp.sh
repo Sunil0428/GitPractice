@@ -13,6 +13,6 @@ if [ -d "$LOGSFOLDER" ]
         echo -e "$R $LOGSFOLDER is not exists $N"
 fi
 
-Files = $(find $LOGSFOLDER  -name *.log)
+Files=$(find $LOGSFOLDER -name *.log)
 
 echo $Files
