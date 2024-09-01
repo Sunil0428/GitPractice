@@ -17,11 +17,8 @@ Files=$(find $LOGSFOLDER -name *.log -mtime +30)
 
 echo $Files
 
-#while IFS= read -r Result
-#do
-#    echo "Deleting line: $Result"
+while IFS= read -r Result
+do
+    echo "Deleting line: $Result"
 
-#done <<<$Files
-
-echo ${Files[0]}
-echo ${Files[1]}
+done <<<$Files
