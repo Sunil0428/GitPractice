@@ -9,9 +9,9 @@ N="\e[0m"
 if [ -d "$LOGSFOLDER" ]
 {
     Then
-        echo -e "$Y$LOGSFOLDER exists $N"
+        echo -e "$Y $LOGSFOLDER exists $N"
     else
-        echo -e "$R$LOGSFOLDER is not exists $N"
+        echo -e "$R $LOGSFOLDER is not exists $N"
 
 fi
 }
