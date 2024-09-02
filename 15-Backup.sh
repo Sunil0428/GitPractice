@@ -10,7 +10,7 @@ N="\e[0m"
 USAGE()
 {
     echo -e "$Y USAGE:: Bachup.sh <SourceDir> <DestDir> <No of days Files Older than> $N"
-    exit1
+    exit 1
 }
 
 if [ $# -lt 2 ]
