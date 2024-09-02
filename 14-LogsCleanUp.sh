@@ -32,7 +32,7 @@ echo $Files
 
 while IFS= read -r Result
 do
-    echo "Deleting line: $Result"
+    echo "Deleting line:$Result"
     rm -rf $Result
 
 done <<<$Files
