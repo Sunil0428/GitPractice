@@ -10,9 +10,29 @@ N="\e[0m"
 USAGE()
 {
     echo -e "$Y USAGE:: Bachup.sh <SourceDir> <DestDir> <No of days Files Older than> $N"
+    exit1
 }
 
 if [ $# -lt 2 ]
 then 
-    USAGE
+    USAGE #To check the right no of arguments have been passed or not
+    
+fi
+
+#Check the given directories are present in the system or not
+
+if [ ! -d $1 ]
+then 
+    echo -e "$R Given source directory is not present in the system $N"
+    exit 1
+else 
+    echo -e "$Y Given source directory is not present in the system $N" 
+fi
+
+if [ ! -d $2 ]
+then 
+    echo -e "$R Given destination directory is not present in the system $N"
+    exit 1
+else 
+    echo -e "$Y Given destination directory is not present in the system $N" 
 fi
