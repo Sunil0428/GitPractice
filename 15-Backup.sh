@@ -12,7 +12,7 @@ USAGE()
     echo -e "$Y Bachup.sh <SourceDir> <DestDir> <No of days Files Older than> $N"
 }
 
-if[ $# -lt 2 ]
+if [ $# -lt 2 ]
 then 
     USAGE
 fi
