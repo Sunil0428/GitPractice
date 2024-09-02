@@ -21,7 +21,7 @@ fi
 
 #Check the given directories are present in the system or not
 
-if [ ! -d $1 ]
+if [ -d "$1" ]
 then 
     echo -e "$R Given source directory is not present in the system $N"
     exit 1
@@ -29,7 +29,7 @@ else
     echo -e "$Y Given source directory is not present in the system $N" 
 fi
 
-if [ ! -d $2 ]
+if [ -d "$2" ]
 then 
     echo -e "$R Given destination directory is not present in the system $N"
     exit 1
