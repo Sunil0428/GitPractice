@@ -36,3 +36,7 @@ else
     echo -e "$Y Given destination directory $2 is not present in the system $N"
     exit 1 
 fi
+
+ARCHIVEFILES=$(find $1 -name "*.log")
+
+echo $ARCHIVEFILES
