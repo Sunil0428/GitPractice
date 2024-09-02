@@ -23,7 +23,7 @@ fi
 
 if [ -d "$1" ]
 then 
-    echo -e "$R Given source directory $1 is not present in the system $N"
+    echo -e "$R Given source directory $1 is  present in the system $N"
     exit 1
 else 
     echo -e "$Y Given source directory $1 is not present in the system $N" 
@@ -31,7 +31,7 @@ fi
 
 if [ -d "$2" ]
 then 
-    echo -e "$R Given destination directory $2 is not present in the system $N"
+    echo -e "$R Given destination directory $2 is present in the system $N"
     exit 1
 else 
     echo -e "$Y Given destination directory $2 is not present in the system $N" 
