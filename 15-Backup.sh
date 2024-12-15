@@ -40,3 +40,7 @@ fi
 ARCHIVEFILES=$(find $1 -name "*.log")
 
 echo $ARCHIVEFILES
+
+zip $ARCHIVEFILES
+
+mv zip $ARCHIVEFILES $ARCHIVEFILES $2
